@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
+//font-family: 'Mulish', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+//font-family: 'Lato', sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// color map 
+$black: #000000;
+$white: #FFFFFF;
+$gray: #00000029;
+$gray-dark: #707070;
+$green-light: #A9C5BA;
+
+// form map
+.form-group-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 13px;
+  width: 100%;
+}
+
+.form-group-input input {
+  height: 50px;
+  padding-left: 1.3rem;
+  font-size: 16px;
+  font-family: 'Mulish', sans-serif;
+  letter-spacing: 0px;
+  opacity: 1;
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid $gray-dark;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -webkit-appearance:none;
+}
+
+.form-group-input input::placeholder {
+  color: transparent;
+}
+
+
+.form-group-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 30px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: normal;
+  color: $gray-dark;
+  letter-spacing: 0px;
+  opacity: 1;
+  pointer-events: none;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}
+
+.form-group-input input:focus + label,
+.form-group-input input:not(:placeholder-shown) + label{
+  font-size: 14px;
+  margin-top: 0;
+}
+
+
+// .form-group-input input:focus {
+//   border-bottom: 1px solid #3951b2;
+// }
+
+// .form-group-input input:required:invalid + label{
+//   color: red;
+// }
+
+// .form-group-input input:focus:required:invalid{
+//   border-bottom: 1px solid red;
+// }
+
+.form-group-input input:required:invalid + label:before{
+  content: '';
+}
+
+// btn-submit map 
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 45px;
+  padding-top: 0.7rem;
+  background-color: $gray-dark;
+  font-family: 'Mulish', sans-serif;
+  border: none;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+.btn-title {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: $white;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+
+
+// google btn 
+.btn-google {
+  background: $white;
+  width: 265px;
+  height: 45px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 6px $gray;
+  border: none;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+.google-btn-title {
+  margin-top: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  color: $black;
+  letter-spacing: 0px;
+  opacity: 1;
+}
