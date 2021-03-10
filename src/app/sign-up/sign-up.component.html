@@ -19,11 +19,11 @@
       </div>
     </div>
     <div class="form-group-input mt-3">
-      <input type="password" minlength="5" formControlName="password" placeholder=" ">
+      <input type="password" minlength="6" formControlName="password" placeholder=" ">
       <label for="password">Create Password</label>
       <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="error-feedback">
         <div *ngIf="f.password.errors.required" class="error-text">Password is required</div>
-        <div *ngIf="f.password.errors.minlength" class="error-text">Password must be at least 5 characters long</div>
+        <div *ngIf="f.password.errors.minlength" class="error-text">Password must be at least 6 characters long</div>
       </div>
     </div>
 

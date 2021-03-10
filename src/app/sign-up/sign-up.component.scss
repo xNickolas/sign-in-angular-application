@@ -10,12 +10,12 @@
 }
 
 .form-title {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 30px;
-  letter-spacing: 0px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-medium;
+  letter-spacing: $spacing-primary;
   color: $gray-dark;
-  opacity: 1;
+  opacity: $opacity-primary;
 }
 
 .sign-in-form {
@@ -36,44 +36,62 @@
 }
 
 .hide-md-lg span {
+  background-color: $gray;
   width: 10rem;
   height: 1px;
-  background-color: $gray;
   margin-bottom: 0.8rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 .hide-md-lg p {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-primary;
+  letter-spacing: $spacing-primary;
   color: $gray-dark;
-  letter-spacing: 0px;
-  opacity: 1;
+  opacity: $opacity-primary;
 }
 
 .infos p {
   padding-left: 4rem;
   padding-right: 4rem;
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-primary;
+  letter-spacing: $spacing-primary;
   color: $gray-dark;
-  letter-spacing: 0px;
-  opacity: 1;
+  opacity: $opacity-primary;
 }
 
 p a {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 16px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-secondary;
   text-decoration: underline;
+  letter-spacing: $spacing-primary;
   color: $green-light;
-  letter-spacing: 0px;
-  opacity: 1;
+  opacity: $opacity-primary;
   cursor: pointer;
 }
 p a:hover {
   color: $black;
+}
+
+@media screen and (max-width: $screen-lg-min) {
+  .form-container {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .sign-in-form {
+    align-items: center;
+    width: 320px;
+    margin-top: -2rem;
+  }
+
+  .hide-md-lg span {
+    width: 6rem;
+  }
 }

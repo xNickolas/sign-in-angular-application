@@ -8,6 +8,7 @@
       <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)" class="error-feedback">
         <div *ngIf="f.username.errors.invalid" class="error-text">Your email address is incorrect</div>
         <div *ngIf="f.username.errors.required" class="error-text">Email is required</div>
+        <div *ngIf="f.username.errors.email" class="error-text">Username must be an email</div>
         <!-- <div *ngIf="singInForm.controls['username'].hasError('whitesSpacesInvalid')" class="error-text">This field cannot be empty</div> -->
       </div>
     </div>

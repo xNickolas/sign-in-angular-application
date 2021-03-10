@@ -1,24 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;700&display=swap');
-//font-family: 'Mulish', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-//font-family: 'Lato', sans-serif;
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+// ------------------------------------------------------------- //
 
-// color map 
+
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+// ------------------------------------------------------------- //
+
+
+
+// COLOR MAP
 $black: #000000;
 $white: #FFFFFF;
 $gray: #00000029;
 $gray-dark: #707070;
 $green-light: #A9C5BA;
+// ------------------------------------------------------------- //
 
-// form map
+
+// FONT MAP
+$font-primary: ('Mulish', sans-serif);
+$font-secondary: ('Lato', sans-serif);
+
+$spacing-primary: 0px;
+$opacity-primary: 1;
+
+$font-size-primary: 14px;
+$font-size-secondary: 16px;
+$font-size-normal: 18px;
+$font-size-regular: 20px;
+$font-size-medium: 30px;
+$font-size-default: 35px;
+
+$normal-weight: 400;
+$light-weight:  300;
+$xbold-weight:  800;
+
+$regular-weight: $normal-weight;
+$book-weight:    $light-weight;
+$heavy-weight:   $xbold-weight;
+// ------------------------------------------------------------- //
+
+
+//  GLOBAL FORM
 .form-group-input {
   display: flex;
   flex-direction: column;
@@ -48,7 +89,6 @@ $green-light: #A9C5BA;
   color: transparent;
 }
 
-
 .form-group-input label {
   position: absolute;
   top: 0;
@@ -71,31 +111,19 @@ $green-light: #A9C5BA;
   margin-top: 0;
 }
 
-
-// .form-group-input input:focus {
-//   border-bottom: 1px solid #3951b2;
-// }
-
-// .form-group-input input:required:invalid + label{
-//   color: red;
-// }
-
-// .form-group-input input:focus:required:invalid{
-//   border-bottom: 1px solid red;
-// }
-
 .form-group-input input:required:invalid + label:before{
   content: '';
 }
+// ------------------------------------------------------------- //
 
-// btn-submit map 
+
+// GLOBAL BUTTONS
 .btn-submit {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 180px;
   height: 45px;
-  // padding-top: 0.7rem;
   background-color: $gray-dark;
   font-family: 'Mulish', sans-serif;
   border: none;
@@ -112,9 +140,10 @@ $green-light: #A9C5BA;
   margin-top: 0.8rem;
   opacity: 1;
 }
+// ------------------------------------------------------------- //
 
 
-// google btn 
+// GOOGLE BUTTON
 .btn-google {
   background: $white;
   width: 265px;
@@ -139,9 +168,10 @@ $green-light: #A9C5BA;
   letter-spacing: 0px;
   opacity: 1;
 }
+// ------------------------------------------------------------- //
 
-// errors feedback 
 
+// INVALID FEEDBACK
 .error-feedback {
   display: flex;
   flex-direction: initial;
@@ -155,14 +185,13 @@ $green-light: #A9C5BA;
 input.ng-touched.ng-invalid {
   border-bottom: 2px solid $red
 }
+// ------------------------------------------------------------- //
 
 
-// input.ng-touched.ng-valid {
-//   border-bottom: 1px solid $green
-// }
-
-
+// LOADING SPINNER
 .sppiner-border {
   color: $white;
   background-color: $white;
 }
+// ------------------------------------------------------------- //
+

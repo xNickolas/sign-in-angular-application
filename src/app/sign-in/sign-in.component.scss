@@ -10,12 +10,12 @@
 }
 
 .form-title {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 30px;
-  letter-spacing: 0px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-medium;
   color: $gray-dark;
-  opacity: 1;
+  letter-spacing: $spacing-primary;
+  opacity: $opacity-primary;
 }
 
 .sign-in-form {
@@ -34,12 +34,12 @@
 }
 
 .btn-forgot {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-primary;
   color: $gray-dark;
-  letter-spacing: 0px;
-  opacity: 1;
+  letter-spacing: $spacing-primary;
+  opacity: $opacity-primary;
   cursor: pointer;
 }
 .btn-forgot:hover {
@@ -64,33 +64,51 @@
 }
 
 .hide-md-lg p {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-primary;
   color: $gray-dark;
-  letter-spacing: 0px;
-  opacity: 1;
+  letter-spacing: $spacing-primary;
+  opacity: $opacity-primary;
 }
 
 .create-account p {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-primary;
   color: $gray-dark;
-  letter-spacing: 0px;
-  opacity: 1;
+  letter-spacing: $spacing-primary;
+  opacity: $opacity-primary;
 }
 
 .btn-create-account {
-  font-family: 'Mulish', sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  text-decoration: underline;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-secondary;
   color: $green-light;
-  letter-spacing: 0px;
-  opacity: 1;
+  text-decoration: underline;
+  letter-spacing: $spacing-primary;
+  opacity: $opacity-primary;
   cursor: pointer;
 }
 .btn-create-account:hover {
   color: $black;
+}
+
+@media screen and (max-width: $screen-lg-min) {
+  .form-container {
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .sign-in-form {
+    align-items: center;
+    width: 320px;
+    margin-top: 2rem;
+  }
+
+  .hide-md-lg span {
+    width: 6rem;
+  }
 }
