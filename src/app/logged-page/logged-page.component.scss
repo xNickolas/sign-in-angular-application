@@ -1,0 +1,74 @@
+@import 'src/styles.scss';
+
+.navbar {
+  background: $gray-dark;
+}
+
+.nav-item {
+  margin-right: 1rem;
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-secondary;
+  letter-spacing: $spacing-primary;
+  color: $white;
+  opacity: $opacity-primary;
+  cursor: pointer;
+}
+.nav-item:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: $white;
+}
+
+.logged-area-container {
+  width: 100%;
+  height: 100vh;
+  padding: 5rem;
+}
+
+.logged-area-container, h1, h3 {
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-default;
+  letter-spacing: $spacing-primary;
+  color: $black;
+  opacity: $opacity-primary;
+}
+
+.logged-area-container, p {
+  font-family: $font-primary;
+  font-weight: $regular-weight;
+  font-size: $font-size-secondary;
+  letter-spacing: $spacing-primary;
+  color: $black;
+  opacity: $opacity-primary;
+}
+
+.user-box {
+  border: 1px solid $gray-dark;
+  width: 300px;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.text-danger:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: $screen-lg-min) {
+  .logged-area-container {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+  }
+
+  .logged-area-container, p {
+    margin-bottom: 3rem;
+  }
+
+}

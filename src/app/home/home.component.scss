@@ -48,24 +48,6 @@
   opacity: $opacity-primary;
 }
 
-.dot-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-slider {
-  width: 11px;
-  height: 11px;
-  background: $white;
-  margin-left: 1rem;
-  opacity: 0.5;
-  border: none;
-  border-radius: 8px;
-}
-
-
 .user-container {
   width: 50%;
   padding: 7rem;

@@ -29,7 +29,7 @@
 
     <button [disabled]="loading" class="btn-submit mt-4">
       <img src="assets/images/white-loading.svg" *ngIf="loading">
-      <p class="btn-title">Sign Up</p>
+      <p class="btn-title" *ngIf="!loading">Sign Up</p>
     </button>
 
     <div class="hide-md-lg mt-5">
