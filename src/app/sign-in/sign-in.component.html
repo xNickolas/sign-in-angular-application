@@ -5,17 +5,29 @@
     <div class="form-group-input mt-3">
       <input type="text" formControlName="username" placeholder=" ">
       <label for="username">Users name or Email</label>
+      <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)" class="error-feedback">
+        <div *ngIf="f.username.errors.invalid" class="error-text">Your email address is incorrect</div>
+        <div *ngIf="f.username.errors.required" class="error-text">Email is required</div>
+        <!-- <div *ngIf="singInForm.controls['username'].hasError('whitesSpacesInvalid')" class="error-text">This field cannot be empty</div> -->
+      </div>
     </div>
     <div class="form-group-input mt-3">
       <input type="password" formControlName="password" placeholder=" " required>
       <label for="password">Password</label>
+      <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="error-feedback">
+        <div *ngIf="f.password.errors.invalid" class="error-text">Your password address is incorrect</div>
+        <div *ngIf="f.password.errors.required" class="error-text">Password is required</div>
+      </div>
     </div>
     <div class="forgot-pass mt-3">
       <a class="btn-forgot">Forgot password?</a>
     </div>
 
-    <button class="btn-submit mt-4">
-      <p class="btn-title">Sign In</p>
+    <button [disabled]="loading" class="btn-submit mt-4">
+      <img src="assets/images/white-loading.svg" *ngIf="loading">
+      <p class="btn-title" *ngIf="!loading">
+        Sign In
+      </p>
     </button>
 
     

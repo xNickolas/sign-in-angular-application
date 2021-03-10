@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
+import { AlertService } from './../services/alert.service';
 import { UserService } from './../services/user.service';
 
 @Component({
@@ -13,28 +14,33 @@ import { UserService } from './../services/user.service';
 export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
+  loading = false;
 
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
     private router: Router,
+    private alertService: AlertService,
   ) { }
 
   ngOnInit() {
     this.signUpForm = this.fb.group({
-      fullname: ['', Validators.required],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      fullname: ['',  Validators.compose([Validators.required, Validators.minLength(3)])],
+      username: ['', [Validators.required, Validators.email]],
+      password: ['',  Validators.compose([Validators.required, Validators.minLength(6)])]
     });
   }
 
+  get f() { return this.signUpForm.controls; }
+
   onSubmit() {
-    console.log(this.signUpForm);
+    // console.log(this.signUpForm);
 
     if (this.signUpForm.invalid) {
       return;
     }
 
+    this.loading = true;
     this.userService.register(this.signUpForm.value)
     .pipe(
       first(),
@@ -44,9 +50,18 @@ export class SignUpComponent implements OnInit {
         this.router.navigate(['/sign-in']);
       },
       error => {
+        this.alertService.error(error);
+        this.loading = false;
         console.log(error);
       }
     );
   }
+
+  // showError(controlName: string) {
+  //   if (!this.signUpForm.get(controlName)) {
+  //     return false;
+  //   }
+  //   return this.signUpForm.get(controlName).invalid && this.signUpForm.get(controlName).touched;
+  // }
 
 }

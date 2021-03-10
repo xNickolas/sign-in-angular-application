@@ -95,7 +95,7 @@ $green-light: #A9C5BA;
   align-items: center;
   width: 180px;
   height: 45px;
-  padding-top: 0.7rem;
+  // padding-top: 0.7rem;
   background-color: $gray-dark;
   font-family: 'Mulish', sans-serif;
   border: none;
@@ -109,6 +109,7 @@ $green-light: #A9C5BA;
   font-size: 16px;
   color: $white;
   letter-spacing: 0px;
+  margin-top: 0.8rem;
   opacity: 1;
 }
 
@@ -137,4 +138,31 @@ $green-light: #A9C5BA;
   color: $black;
   letter-spacing: 0px;
   opacity: 1;
+}
+
+// errors feedback 
+
+.error-feedback {
+  display: flex;
+  flex-direction: initial;
+  margin-top: 5px;
+}
+
+.error-text {
+  color: red;
+}
+
+input.ng-touched.ng-invalid {
+  border-bottom: 2px solid $red
+}
+
+
+// input.ng-touched.ng-valid {
+//   border-bottom: 1px solid $green
+// }
+
+
+.sppiner-border {
+  color: $white;
+  background-color: $white;
 }

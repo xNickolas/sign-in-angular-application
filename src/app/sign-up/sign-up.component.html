@@ -3,19 +3,32 @@
 
   <form class="sign-in-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
     <div class="form-group-input mt-3">
-      <input type="text" formControlName="fullname" placeholder=" " required>
+      <input type="text" minlength="4" formControlName="fullname" placeholder=" " required>
       <label for="fullname">Full Name</label>
+      <div *ngIf="f.fullname.invalid && (f.fullname.dirty || f.fullname.touched)" class="error-feedback">
+        <div *ngIf="f.fullname.errors.required" class="error-text">Full name is required</div>
+        <div *ngIf="f.fullname.errors.minlength" class="error-text">Name must be at least 4 characters long</div>
+      </div>
     </div>
     <div class="form-group-input mt-3">
-      <input type="text" formControlName="username" placeholder=" ">
+      <input type="email" formControlName="username" placeholder=" ">
       <label for="username">Users name or Email</label>
+      <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched)" class="error-feedback">
+        <div *ngIf="f.username.errors.required" class="error-text">Email is required</div>
+        <div *ngIf="f.username.errors.email" class="error-text">Username must be an email</div>
+      </div>
     </div>
     <div class="form-group-input mt-3">
-      <input type="password" formControlName="password" placeholder=" ">
+      <input type="password" minlength="5" formControlName="password" placeholder=" ">
       <label for="password">Create Password</label>
+      <div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)" class="error-feedback">
+        <div *ngIf="f.password.errors.required" class="error-text">Password is required</div>
+        <div *ngIf="f.password.errors.minlength" class="error-text">Password must be at least 5 characters long</div>
+      </div>
     </div>
 
-    <button class="btn-submit mt-4">
+    <button [disabled]="loading" class="btn-submit mt-4">
+      <img src="assets/images/white-loading.svg" *ngIf="loading">
       <p class="btn-title">Sign Up</p>
     </button>
 
