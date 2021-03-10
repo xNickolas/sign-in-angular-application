@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="#">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+<h1>Hi, {{ currentUser.fullname }}!</h1>
+<p>You're logged in Invision!</p>
+<h3>All registered users:</h3>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.username }} ({{ user.fullname }})
+    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+  </li>
+</ul>

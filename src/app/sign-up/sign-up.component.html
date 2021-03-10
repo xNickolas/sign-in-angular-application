@@ -1,17 +1,17 @@
 <div class="form-container">
   <p class="form-title">Getting Started</p>
 
-  <form class="sign-in-form">
+  <form class="sign-in-form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
     <div class="form-group-input mt-3">
-      <input type="text" placeholder=" " required>
+      <input type="text" formControlName="fullname" placeholder=" " required>
       <label for="fullname">Full Name</label>
     </div>
     <div class="form-group-input mt-3">
-      <input type="text" placeholder=" ">
+      <input type="text" formControlName="username" placeholder=" ">
       <label for="username">Users name or Email</label>
     </div>
     <div class="form-group-input mt-3">
-      <input type="password" placeholder=" ">
+      <input type="password" formControlName="password" placeholder=" ">
       <label for="password">Create Password</label>
     </div>
 
