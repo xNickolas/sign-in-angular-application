@@ -1,27 +1,52 @@
-# SignInAngularApplication
+# Angular Application :heavy_check_mark:
+![Badge](https://img.shields.io/badge/npm-v6.14.11-lightgrey)![Badge](https://img.shields.io/badge/node.js-v14.15.5-lightgrey)
+![Badge](https://img.shields.io/badge/angular-v11-lightgrey) ![Badge](https://img.shields.io/badge/typescript-v4.2-lightgrey)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+# Welcome User!  
 
-## Development server
+This project developed consists of an interaction with the user, where he can create his account and be redirected to the login page. It has the option to log in with the created account or with your google account.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Home :computer:
+![Alt Text](https://github.com/xNickolas/sign-in-angular-application/blob/master/src/assets/desktop.gif)
 
-## Code scaffolding
+### Dashboard  :iphone:
+![Alt Text](https://github.com/xNickolas/sign-in-angular-application/blob/master/src/assets/mobile.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Features :heavy_check_mark:
 
-## Build
+- [x] User Registration
+- [x] User login
+- [x] Delete users
+- [x] Logout
+- [ ] Sign in Google
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Prerequisites :heavy_check_mark:
 
-## Running unit tests
+Before you start, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Angular](https://angular.io/), [TypeScript](https://www.typescriptlang.org/), [Npmjs](https://www.npmjs.com/)
+Besides this, it is good to have an editor to work with the code, such as [VSCode](https://code.visualstudio.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# Clone this repository
+$ git clone <https://github.com/xNickolas/sign-in-angular-application>
 
-## Running end-to-end tests
+# Go to the project folder in terminal/cmd and install the dependencies
+$ npm install 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# Run the application in development mode
+$ ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# The server will start on port:4200
+```
+
+### Technologies 🛠
+
+The following tools were used in the construction of the project:
+
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/en/)
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Npmjs](https://www.npmjs.com/)
+- [Bootstrap](https://getbootstrap.com/)
