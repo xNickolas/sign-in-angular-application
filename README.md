@@ -6,10 +6,10 @@
 
 This project developed consists of an interaction with the user, where he can create his account and be redirected to the login page. It has the option to log in with the created account or with your google account.
 
-### Home :computer:
+### Desktop :computer:
 ![Alt Text](https://github.com/xNickolas/sign-in-angular-application/blob/master/src/assets/desktop.gif)
 
-### Dashboard  :iphone:
+### Mobile  :iphone:
 ![Alt Text](https://github.com/xNickolas/sign-in-angular-application/blob/master/src/assets/mobile.gif)
 
 ### Features :heavy_check_mark:
