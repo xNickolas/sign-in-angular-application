@@ -49,4 +49,3 @@ The following tools were used in the construction of the project:
 - [Angular](https://angular.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Npmjs](https://www.npmjs.com/)
-- [Bootstrap](https://getbootstrap.com/)
